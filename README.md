@@ -1,6 +1,6 @@
 # Card Market
 
-A marketplace for trading cards: users build a collection, create decks, list cards for sale, make offers, complete orders and more later on (combo practice etc.). Built as a portfolio project with ASP.NET Core, with React, Node.js and Angular clients added on top.
+A marketplace for trading cards: users build a collection, create decks, list cards for sale, make offers, and complete orders. Built as a portfolio project with ASP.NET Core, with React, Node.js and Angular clients added on top.
 
 **Status:** early development (Epic 0, project setup). Live demo: _coming soon_.
 
@@ -26,4 +26,35 @@ _Diagram coming in a later epic._ For now:
 
 ## Getting started
 
-**Prerequisit
+**Prerequisites:** .NET SDK 10, Docker, Git. Node.js is needed later for the frontends.
+
+```bash
+git clone git@github.com:Nik-Pt/card-market.git
+cd card-market
+
+# start the database
+docker compose up -d db
+
+# run the API
+dotnet run --project backend/src/CardMarket.Api
+```
+
+Then open `http://localhost:5080/health` and the API docs at `http://localhost:5080/scalar`. Adjust the port if yours differs.
+
+## Project structure
+
+```
+backend/      ASP.NET Core API (src/) and tests (tests/)
+docs/         ERD, security notes, decision records
+.github/      CI workflows and templates
+```
+
+More folders (`web/`, `notifications/`, `admin/`) appear as each part is built.
+
+## Roadmap
+
+Work is tracked on the GitHub Projects board, with one epic per area: setup, data model, auth, card catalog, collections, decks, marketplace, hardening, and the frontends.
+
+## Licence
+
+MIT
