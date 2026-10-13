@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:17
+    container_name: cardmarket-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-cardmarket}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cardmarket_dev}
+      POSTGRES_DB: ${POSTGRES_DB:-cardmarket}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cardmarket"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:

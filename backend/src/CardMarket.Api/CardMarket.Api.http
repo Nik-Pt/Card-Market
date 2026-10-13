@@ -1,0 +1,6 @@
+@CardMarket.Api_HostAddress = http://localhost:5038
+
+GET {{CardMarket.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

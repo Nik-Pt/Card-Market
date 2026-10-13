@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CardMarket.Api/CardMarket.Api.csproj" />
+    <Project Path="src/CardMarket.Core/CardMarket.Core.csproj" />
+    <Project Path="src/CardMarket.Infrastructure/CardMarket.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CardMarket.Tests/CardMarket.Tests.csproj" />
+  </Folder>
+</Solution>
