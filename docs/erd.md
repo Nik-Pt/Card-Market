@@ -1,6 +1,5 @@
 ﻿# Entity-Relationship Diagram (ERD)
 
-``mermaid
 erDiagram
   USER ||--o{ COLLECTION_ITEM : owns
   USER ||--o{ DECK : builds
