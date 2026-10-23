@@ -1,5 +1,6 @@
-﻿# Entity-Relationship Diagram (ERD)
+# Entity-Relationship Diagram (ERD)
 
+```mermaid
 erDiagram
   USER ||--o{ COLLECTION_ITEM : owns
   USER ||--o{ DECK : builds
@@ -15,3 +16,4 @@ erDiagram
   LISTING ||--o{ OFFER : receives
   LISTING ||--o{ ORDER : produces
   OFFER |o--o| ORDER : results_in
+```
