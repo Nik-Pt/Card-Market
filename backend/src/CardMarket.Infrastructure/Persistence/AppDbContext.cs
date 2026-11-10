@@ -24,5 +24,12 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
     {
         base.OnModelCreating(b);
         b.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        b.Entity<ApplicationUser>().ToTable("users");
+        b.Entity<IdentityRole<Guid>>().ToTable("roles");
+        b.Entity<IdentityUserRole<Guid>>().ToTable("user_roles");
+        b.Entity<IdentityUserClaim<Guid>>().ToTable("user_claims");
+        b.Entity<IdentityUserLogin<Guid>>().ToTable("user_logins");
+        b.Entity<IdentityUserToken<Guid>>().ToTable("user_tokens");
+        b.Entity<IdentityRoleClaim<Guid>>().ToTable("role_claims");
     }
 }
